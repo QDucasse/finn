@@ -79,6 +79,8 @@ RUN git clone https://github.com/rogersce/cnpy.git /workspace/cnpy
 RUN git clone https://github.com/Xilinx/finn-hlslib.git /workspace/finn-hlslib
 # PyVerilator
 RUN git clone https://github.com/maltanar/pyverilator /workspace/pyverilator
+# nn_benchmark
+RUN git clone https://github.com/QDucasse/nn_benchmark.git /workspace/nn_benchmark
 # oh-my-xilinx
 RUN git clone https://bitbucket.org/maltanar/oh-my-xilinx.git /workspace/oh-my-xilinx
 
@@ -86,6 +88,7 @@ RUN git clone https://bitbucket.org/maltanar/oh-my-xilinx.git /workspace/oh-my-x
 # at /workspace/finn -- see run-docker.sh for an example of how to do this.
 ENV PYTHONPATH "${PYTHONPATH}:/workspace/finn/src"
 ENV PYTHONPATH "${PYTHONPATH}:/workspace/pyverilator"
+ENV PYTHONPATH "${PYTHONPATH}:/workspace/nn_benchmark"
 ENV PATH "${PATH}:/workspace/oh-my-xilinx:/home/$UNAME/.local/bin"
 ENV OHMYXILINX "/workspace/oh-my-xilinx"
 

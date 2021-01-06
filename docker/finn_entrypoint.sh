@@ -40,6 +40,10 @@ git -C /workspace/pyverilator checkout $PYVERILATOR_COMMIT --quiet
 gecho "oh-my-xilinx @ $OMX_COMMIT"
 git -C /workspace/oh-my-xilinx pull --quiet
 git -C /workspace/oh-my-xilinx checkout $OMX_COMMIT --quiet
+# nn_benchmark
+gecho "nn_benchmark @ master"
+git -C /workspace/nn_benchmark pull --quiet
+pip install --user -e /workspace//nn_benchmark
 
 if [ ! -z "$VIVADO_PATH" ];then
   # source Vivado env.vars
